@@ -30,8 +30,7 @@ export default function Home() {
         <div
           className="absolute inset-0 bg-cover bg-[center_30%]"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=2400&q=80')",
+            backgroundImage: "url('/assets/hero-banner.jpg')",
           }}
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(12,10,9,0.72)_0%,rgba(12,10,9,0.38)_38%,rgba(12,10,9,0.18)_100%)]" />
@@ -46,7 +45,7 @@ export default function Home() {
               Whether it&apos;s a sleek two-wheeler or a powerful four-wheeler,
               Finnable deposits fast, hassle-free funds right into your bank
               account. Enjoy a 100% digital, zero-collateral application process
-              with absolute transparency.
+              with absolute transparency. 
             </p>
             <a
               href="#eligibility"
@@ -67,7 +66,7 @@ export default function Home() {
       </div>
 
       <section className="border-t border-[#f0f0f0] bg-white">
-        <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-4 px-5 py-4 lg:px-10">
+        <div className="mx-auto flex max-w-[1240px] items-center justify-between gap-3 px-5 py-4 lg:px-10">
           <nav className="flex min-w-0 flex-1 items-center gap-6 overflow-x-auto text-[14.5px] text-[#4a4a4a]">
             {pageLinks.map((item) => (
               <a key={item.href} href={item.href} className="whitespace-nowrap hover:text-[#1a1a1a]">
@@ -77,7 +76,7 @@ export default function Home() {
           </nav>
           <a
             href="#eligibility"
-            className="hidden h-12 shrink-0 items-center rounded-xl bg-[#e94b78] px-6 text-[15px] font-semibold text-white shadow-[0_8px_20px_rgba(233,75,120,0.25)] transition hover:bg-[#d63e6c] sm:inline-flex"
+            className="hidden py-[10px] shrink-0 items-center rounded-sm bg-[#e94b78] px-6 text-[14px] font-semibold text-white shadow-[0_8px_20px_rgba(233,75,120,0.25)] transition hover:bg-[#d63e6c] sm:inline-flex"
           >
             Check Loan Offer
           </a>
