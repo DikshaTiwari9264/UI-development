@@ -29,27 +29,27 @@ const benefits = [
 
 export function KeyBenefits() {
   return (
-    <section className="bg-white px-5 py-16 sm:px-8 lg:px-10">
+    <section className="bg-white px-4 py-8 sm:px-6 sm:py-10 lg:px-10 lg:py-16">
       <div className="mx-auto max-w-[1200px]">
-        <h2 className="text-[28px] font-semibold  text-[#171717] sm:text-[34px]">
+        <h2 className="text-[20px] font-semibold leading-7 text-[#171717] sm:text-[24px] lg:text-[34px] lg:leading-tight">
           Key Benefits of Applying Online
         </h2>
 
-        <div className="mt-5 grid items-stretch gap-5 lg:grid-cols-[1.35fr_0.72fr]">
-          <div className="grid gap-4 sm:grid-cols-2">
+        <div className="mt-4 flex flex-col-reverse gap-4 sm:mt-5 sm:gap-5 lg:grid lg:grid-cols-[1.35fr_0.72fr] lg:items-stretch lg:gap-5">
+          <div className="grid gap-3 sm:grid-cols-2 sm:gap-4">
             {benefits.map((benefit) => (
               <article
                 key={benefit.title}
-                className={`flex gap-4 rounded-sm px-5 py-6 ${benefit.tone}`}
+                className={`flex items-start gap-2.5 rounded-sm px-3 py-3 sm:gap-3 sm:px-4 sm:py-4 lg:gap-4 lg:px-5 lg:py-6 ${benefit.tone}`}
               >
                 <div className="shrink-0">
-                  <Image src={benefit.icon} alt="" width={64} height={64} />
+                  <Image src={benefit.icon} alt="" width={64} height={64} className="h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16" />
                 </div>
                 <div>
-                  <h3 className="text-[18px] font-semibold text-[#262626]">
+                  <h3 className="text-[14px] font-semibold leading-5 text-[#262626] sm:text-[15px] lg:text-[18px]">
                     {benefit.title}
                   </h3>
-                  <p className="text-[13.5px] font-medium text-[#262626]">
+                  <p className="mt-0.5 text-[12px] font-medium leading-5 text-[#262626] sm:text-[13px] lg:text-[13.5px]">
                     {benefit.text}
                   </p>
                 </div>
@@ -57,7 +57,7 @@ export function KeyBenefits() {
             ))}
           </div>
 
-          <div className="relative aspect-[405/270] w-full overflow-hidden rounded-sm lg:aspect-auto lg:h-[270px] lg:w-[405px]">
+          <div className="relative aspect-[16/9] max-h-[220px] w-full overflow-hidden rounded-lg sm:max-h-[280px] lg:aspect-auto lg:h-[270px] lg:max-h-none lg:w-[405px] lg:rounded-sm">
             <Image
               src="/assets/frame-76.png"
               alt="Watch how an instant personal loan works"

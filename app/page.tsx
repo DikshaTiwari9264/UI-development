@@ -68,7 +68,7 @@ export default function Home() {
 
       <section className="border-t border-[#f0f0f0] bg-white">
         <div className="mx-auto flex max-w-[1240px] items-center justify-between gap-3 px-5 py-4 lg:px-10">
-          <nav className="flex min-w-0 flex-1 items-center gap-6 overflow-x-auto text-[14.5px] text-[#4a4a4a]">
+          <nav className="thin-scroll flex min-w-0 flex-1 items-center gap-6 overflow-x-auto text-[14.5px] text-[#4a4a4a]">
             {pageLinks.map((item) => (
               <a key={item.href} href={item.href} className="whitespace-nowrap hover:text-[#1a1a1a]">
                 {item.label}

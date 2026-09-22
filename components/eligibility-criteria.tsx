@@ -86,23 +86,23 @@ export function EligibilityCriteria() {
   return (
     <section
       id="eligibility"
-      className="bg-[linear-gradient(180deg,#F5F5F5_0%,#FEFCE8_100%)] px-5 py-14 sm:px-8 sm:py-16 lg:px-10 lg:py-14"
+      className="bg-[linear-gradient(180deg,#F5F5F5_0%,#FEFCE8_100%)] px-4 py-6 sm:px-5 sm:py-8 lg:px-10 lg:py-14"
     >
       <div className="mx-auto max-w-[1200px]">
-        <h2 className="text-[28px] font-semibold text-[#171717] sm:text-[34px]">
+        <h2 className="text-[20px] font-semibold leading-7 text-[#171717] sm:text-[24px] lg:text-[34px] lg:leading-tight">
           Eligibility Criteria
         </h2>
-        <p className="mt-2 max-w-[640px] text-[15px] text-[#262626]">
+        <p className="mt-1.5 max-w-[640px] text-[13px] leading-5 text-[#262626] sm:mt-2 sm:text-[14px] lg:text-[15px]">
           To qualify for an instant personal loan, applicants must meet the following standard criteria:
         </p>
 
-        <div className="mt-4 grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_405px]">
+        <div className="mt-3 flex flex-col-reverse gap-3 sm:mt-4 sm:gap-4 lg:grid lg:grid-cols-[minmax(0,1fr)_405px] lg:items-start lg:gap-8">
           <div>
-            <div className="inline-flex max-w-full items-center overflow-x-auto rounded-full bg-[#2F2F2F] p-1">
+            <div className="flex w-full items-stretch rounded-full bg-[#2F2F2F] p-0.5 sm:inline-flex sm:w-auto sm:p-1">
               <button
                 type="button"
                 onClick={() => setType("salaried")}
-                className={`inline-flex h-8 shrink-0 items-center gap-2 rounded-full px-4 text-[14px] font-semibold whitespace-nowrap ${
+                className={`flex min-w-0 flex-1 items-center justify-center gap-1 rounded-full px-1.5 py-1 text-center text-[11px] font-semibold leading-4 sm:h-8 sm:flex-none sm:gap-2 sm:whitespace-nowrap sm:px-4 sm:py-0 sm:text-[13px] lg:text-[14px] ${
                   type === "salaried"
                     ? "bg-white text-[#e94b78] shadow-[0_0_0_1.5px_#e94b78]"
                     : "text-white"
@@ -114,7 +114,7 @@ export function EligibilityCriteria() {
               <button
                 type="button"
                 onClick={() => setType("self-employed")}
-                className={`inline-flex h-8 shrink-0 items-center gap-2 rounded-full px-4 text-[14px] font-semibold whitespace-nowrap ${
+                className={`flex min-w-0 flex-1 items-center justify-center gap-1 rounded-full px-1.5 py-1 text-center text-[11px] font-semibold leading-4 sm:h-8 sm:flex-none sm:gap-2 sm:whitespace-nowrap sm:px-4 sm:py-0 sm:text-[13px] lg:text-[14px] ${
                   type === "self-employed"
                     ? "bg-white text-[#e94b78] shadow-[0_0_0_1.5px_#e94b78]"
                     : "text-white"
@@ -125,23 +125,23 @@ export function EligibilityCriteria() {
               </button>
             </div>
 
-            <div className="mt-6 overflow-hidden rounded-sm  bg-white">
+            <div className="mt-2.5 overflow-hidden rounded-sm bg-white sm:mt-3 lg:mt-6">
               {rows.map((row) => (
                 <div
                   key={row.label}
-                  className="grid border-b border-[#F0E6C8] last:border-b-0 sm:grid-cols-[180px_1fr]"
+                  className="grid border-b border-[#F0E6C8] last:border-b-0 sm:grid-cols-[160px_1fr] lg:grid-cols-[180px_1fr]"
                 >
-                  <div className="flex items-start gap-1.5 border-[#F0E6C8] px-4 py-3 text-[14.5px] font-semibold text-[#262626] sm:border-r sm:whitespace-nowrap">
+                  <div className="flex items-start gap-1.5 border-[#F0E6C8] px-2.5 py-2 text-[13px] font-semibold leading-5 text-[#262626] sm:border-r sm:px-3 sm:py-2.5 sm:text-[14px] sm:whitespace-nowrap lg:px-4 lg:py-3 lg:text-[14.5px]">
                     <span className="mt-0.5 shrink-0">
-                      <Image src={row.icon} alt="" width={18} height={18} />
+                      <Image src={row.icon} alt="" width={18} height={18} className="h-4 w-4 sm:h-[18px] sm:w-[18px]" />
                     </span>
                     {row.label}
                   </div>
-                  <div className="text-[14.5px] text-[#262626]">
+                  <div className="text-[12px] leading-5 text-[#262626] sm:text-[13px] lg:text-[14.5px]">
                     {row.lines.map((line, index) => (
                       <p
                         key={line}
-                        className={`px-4 py-2 ${index > 0 ? "border-t border-[#F0E6C8]" : ""}`}
+                        className={`px-2.5 py-1.5 sm:px-3 sm:py-2 lg:px-4 lg:py-2 ${index > 0 ? "border-t border-[#F0E6C8]" : ""}`}
                       >
                         {line}
                       </p>
@@ -152,7 +152,7 @@ export function EligibilityCriteria() {
             </div>
           </div>
 
-          <div className="relative aspect-[405/270] w-full overflow-hidden rounded-xl lg:aspect-auto lg:h-[270px] lg:w-[405px]">
+          <div className="relative aspect-[16/9] max-h-[220px] w-full overflow-hidden rounded-lg sm:max-h-[280px] lg:aspect-auto lg:h-[270px] lg:max-h-none lg:w-[405px] lg:rounded-xl">
             <Image
               src="/assets/frame-76.png"
               alt="Watch how an instant personal loan works"

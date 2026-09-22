@@ -34,6 +34,7 @@ function FeeIcon({ type }: { type: (typeof fees)[number]["icon"] }) {
     height: 20,
     viewBox: "0 0 20 20",
     fill: "#E11D48",
+    className: "h-4 w-4 shrink-0 lg:h-5 lg:w-5",
     "aria-hidden": true as const,
   };
 
@@ -102,41 +103,47 @@ export function PricingStructure() {
   return (
     <section
       id="fees"
-      className="bg-[linear-gradient(180deg,#F5F5F5_0%,#F0F9FF_100%)] px-5 py-14 sm:px-8 sm:py-16 lg:px-10 lg:py-14"
+      className="bg-[linear-gradient(180deg,#F5F5F5_0%,#F0F9FF_100%)] px-4 py-8 sm:px-6 sm:py-10 lg:px-10 lg:py-14"
     >
       <div className="mx-auto max-w-[1200px]">
-        <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,1fr)_300px]">
+        <div className="grid grid-cols-1 gap-4 sm:gap-5 lg:grid-cols-[minmax(0,1fr)_300px]">
           <div className="lg:col-start-1 lg:row-start-1">
-            <h2 className="text-[28px] font-semibold text-[#171717] sm:text-[34px]">
+            <h2 className="text-[20px] font-semibold leading-7 text-[#171717] sm:text-[24px] lg:text-[34px] lg:leading-tight">
               Interest Rates, Fees, and Pricing Structure
             </h2>
-            <p className="mt-2 text-[15px] text-[#525252]">
+            <p className="mt-1.5 text-[13px] leading-5 text-[#525252] sm:mt-2 sm:text-[14px] lg:text-[15px]">
               Transparent pricing ensures you know the exact cost of your loan before signing:
             </p>
           </div>
 
+          <div className="flex flex-col-reverse gap-4 sm:gap-5 lg:contents">
           <div className="overflow-hidden rounded-lg border border-[#E6EEF5] bg-white lg:col-start-1 lg:row-start-2">
-            <div className="grid h-full items-stretch sm:grid-cols-2 xl:grid-cols-5">
+            <div className="flex flex-col lg:grid lg:grid-cols-5 lg:grid-rows-[auto_1fr]">
               {fees.map((item, index) => (
-                <div
-                  key={item.title}
-                  className={`flex h-full flex-col px-4 pb-5 pt-4 ${
-                    index !== fees.length - 1
-                      ? "border-b border-[#E6EEF5] xl:border-r xl:border-b-0"
-                      : ""
-                  }`}
-                >
-                  <FeeIcon type={item.icon} />
-                  <h3 className="mt-3 h-10 text-[15px] font-semibold leading-5 text-[#171717]">
-                    {item.title}
-                  </h3>
-                  <p className="mt-14 text-[13px] leading-5 text-[#737373]">{item.text}</p>
+                <div key={item.title} className="contents">
+                  <div
+                    className={`flex items-center gap-2.5 border-b border-[#E6EEF5] px-3 py-3 sm:gap-3 sm:px-4 sm:py-3.5 lg:block lg:row-start-1 lg:px-3 lg:pb-3 lg:pt-4 xl:px-4 ${
+                      index !== fees.length - 1 ? "lg:border-r" : ""
+                    }`}
+                  >
+                    <FeeIcon type={item.icon} />
+                    <h3 className="text-[13px] font-semibold leading-5 text-[#171717] sm:text-[14px] lg:mt-3 lg:text-[13px] xl:text-[14px]">
+                      {item.title}
+                    </h3>
+                  </div>
+                  <p
+                    className={`px-3 py-2.5 text-[12px] leading-5 text-[#737373] sm:px-4 sm:py-3 sm:text-[13px] lg:row-start-2 lg:px-3 lg:py-3 lg:text-[12px] xl:px-4 xl:py-4 xl:text-[13px] ${
+                      index !== fees.length - 1 ? "border-b border-[#E6EEF5] lg:border-b-0 lg:border-r" : ""
+                    }`}
+                  >
+                    {item.text}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="relative aspect-[16/10] overflow-hidden rounded-xl lg:col-start-2 lg:row-start-2 lg:aspect-auto lg:h-full">
+          <div className="relative aspect-[16/9] max-h-[220px] overflow-hidden rounded-lg sm:max-h-[280px] lg:col-start-2 lg:row-start-2 lg:aspect-auto lg:h-full lg:max-h-none lg:rounded-xl">
             <Image
               src="/assets/frame-76.png"
               alt="Family spending time together outdoors"
@@ -145,15 +152,16 @@ export function PricingStructure() {
               sizes="(min-width: 1024px) 300px, 100vw"
             />
           </div>
+          </div>
 
-          <div className="rounded-lg border border-[#BAE6FD] bg-[#E0F2FE] px-4 py-4 sm:px-5 lg:col-start-1 lg:row-start-3">
-            <h3 className="text-[16px] font-semibold text-[#0C4A6E]">Representative Loan Example</h3>
-            <p className="mt-2 text-[14px] text-[#0C4A6E]">
+          <div className="rounded-lg border border-[#BAE6FD] bg-[#E0F2FE] px-3 py-3 sm:px-4 sm:py-4 lg:col-start-1 lg:row-start-3 lg:px-5">
+            <h3 className="text-[14px] font-semibold text-[#0C4A6E] sm:text-[15px] lg:text-[16px]">Representative Loan Example</h3>
+            <p className="mt-1.5 text-[12px] leading-5 text-[#0C4A6E] sm:mt-2 sm:text-[13px] lg:text-[14px]">
               For a loan of ₹1,00,000 borrowed for 12 months at an interest rate of 14% p.a.:
             </p>
-            <div className="mt-3 grid gap-2 sm:grid-cols-2 sm:gap-x-10">
+            <div className="mt-2 grid gap-1.5 sm:mt-3 sm:grid-cols-2 sm:gap-x-8 lg:gap-x-10">
               {[exampleLeft, exampleRight].map((column) => (
-                <ul key={column[0].label} className="space-y-1.5 text-[14px] text-[#0C4A6E]">
+                <ul key={column[0].label} className="space-y-1 text-[12px] leading-5 text-[#0C4A6E] sm:space-y-1.5 sm:text-[13px] lg:text-[14px]">
                   {column.map((item) => (
                     <li key={item.label} className="flex gap-2">
                       <span aria-hidden="true">•</span>

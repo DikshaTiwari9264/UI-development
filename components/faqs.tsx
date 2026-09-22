@@ -29,24 +29,27 @@ export function Faqs() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faqs" className="bg-[#f7f8fb] px-5 py-16 sm:px-8 lg:px-10">
+    <section
+      id="faqs"
+      className="bg-[linear-gradient(180deg,#F5F5F5_0%,#EEF2FF_100%)] px-4 py-8 sm:px-6 sm:py-10 lg:px-10 lg:py-16"
+    >
       <div className="mx-auto max-w-[860px]">
-        <h2 className="text-center text-[28px] font-bold tracking-[-0.03em] text-[#1a1a1a] sm:text-[32px]">
+        <h2 className="text-center text-[20px] font-bold tracking-[-0.03em] text-[#1a1a1a] sm:text-[24px] lg:text-[32px]">
           Frequently Asked Questions (FAQs)
         </h2>
 
-        <div className="mt-6 space-y-1">
+        <div className="mt-4 space-y-2 sm:mt-5 sm:space-y-2.5 lg:mt-6 lg:space-y-3">
           {faqs.map((item, index) => {
             const open = openIndex === index;
             return (
-              <div key={item.question} className="overflow-hidden rounded-xl border border-[#eceff5] text-[#262626] bg-white">
+              <div key={item.question} className="overflow-hidden rounded-lg border border-[#eceff5] bg-white text-[#262626] lg:rounded-xl">
                 <button
                   type="button"
                   aria-expanded={open}
                   onClick={() => setOpenIndex(open ? null : index)}
-                  className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
+                  className="flex w-full items-center justify-between gap-3 px-3 py-3 text-left sm:px-4 sm:py-3.5 lg:gap-4 lg:px-5 lg:py-4"
                 >
-                  <span className="text-[15px] text-[#2b2b2b]">{item.question}</span>
+                  <span className="text-[13px] font-medium leading-5 text-[#262626] sm:text-[14px] lg:text-[15px]">{item.question}</span>
                   <svg
                     width="16"
                     height="16"
@@ -59,7 +62,7 @@ export function Faqs() {
                   </svg>
                 </button>
                 {open ? (
-                  <p className="border-t border-[#f2f4f8] px-5 py-4 text-[14.5px] leading-7 text-[#4a4a4a]">
+                  <p className="mt-1 border-t border-[#f2f4f8] px-3 py-2.5 text-[12px] leading-5 text-[#4a4a4a] sm:px-4 sm:text-[13px] lg:mt-2 lg:px-5 lg:py-3 lg:text-[14px]">
                     {item.answer}
                   </p>
                 ) : null}

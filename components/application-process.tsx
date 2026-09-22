@@ -5,19 +5,19 @@ const steps = [
     step: "Step 1",
     title: "Check Your Eligibility",
     text: "Enter basic personal details, PAN, and monthly income to view your pre-approved loan offer in under 60 seconds.",
-    icon: "/assets/Frame (6).png",
+    icon: "/assets/Frame(11).png",
   },
   {
     step: "Step 2",
     title: "Select Amount & Tenure",
     text: "Choose your loan amount (up to ₹10 Lakhs) and repayment tenure (6–60 months) to adjust your preferred monthly EMI.",
-    icon: "/assets/Frame(11).png",
+    icon: "/assets/Frame (10).png",
   },
   {
     step: "Step 3",
     title: "Complete Digital e-KYC",
     text: "Perform instant Aadhaar-based OTP verification and take a live selfie for identity matching.",
-    icon: "/assets/Frame (10).png",
+    icon: "/assets/Frame (9).png",
   },
   {
     step: "Step 4",
@@ -35,48 +35,37 @@ const steps = [
     step: "Step 6",
     title: "Receive Instant Disbursal",
     text: "The approved net loan amount is transferred straight to your bank account within minutes.",
-    icon: "/assets/Frame (9).png",
+    icon: "/assets/Frame (6).png",
   },
 ] as const;
 
 export function ApplicationProcess() {
   return (
-    <section id="how-to-apply" className="bg-white px-5 py-12 sm:px-8 lg:px-10">
+    <section id="how-to-apply" className="bg-white px-4 py-6 sm:px-6 sm:py-10 lg:px-10 lg:py-12">
       <div className="mx-auto max-w-[1200px]">
-        <h2 className="text-[12px] font-semibold text-[##171717] sm:text-[36px]">
+        <h2 className="text-[20px] font-semibold leading-7 text-[#171717] sm:text-[24px] lg:text-[36px] lg:leading-tight">
           Step-by-Step Application Process
         </h2>
 
-        <div className="relative mx-auto mt-6 aspect-[16/9] w-full max-w-[760px] overflow-hidden rounded-2xl">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1400&q=80')",
-            }}
-            role="img"
-            aria-label="Family spending time together outdoors"
+        <div className="relative mx-auto mt-4 aspect-[16/9] w-full max-h-[220px] max-w-[760px] overflow-hidden rounded-lg sm:mt-5 sm:max-h-[320px] sm:rounded-xl lg:mt-6 lg:max-h-[430px] lg:rounded-2xl">
+          <Image
+            src="/assets/frame-76.png"
+            alt="Family spending time together outdoors"
+            fill
+            className="object-cover"
+            sizes="(min-width: 1024px) 760px, 100vw"
           />
-          <button
-            type="button"
-            aria-label="Play video"
-            className="absolute left-1/2 top-1/2 flex h-[76px] w-[76px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-[0_10px_24px_rgba(0,0,0,0.18)]"
-          >
-            <svg width="22" height="26" viewBox="0 0 22 26" fill="none" aria-hidden="true" className="ml-1">
-              <path d="M2 1.5L20.5 13L2 24.5V1.5Z" fill="#e94b78" />
-            </svg>
-          </button>
         </div>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+        <div className="mt-5 grid gap-3 sm:mt-6 sm:grid-cols-2 sm:gap-4 lg:mt-8 lg:grid-cols-3 xl:grid-cols-6">
           {steps.map((item) => (
-            <article key={item.step} className="rounded-sm bg-[#fff4f6] px-[16px] py-4">
-              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white shadow-[0_4px_12px_rgba(233,75,120,0.08)]">
-                <Image src={item.icon} alt="" width={24} height={24} />
+            <article key={item.step} className="rounded-sm bg-[#fff4f6] px-3 py-3 sm:px-4 sm:py-4">
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white shadow-[0_4px_12px_rgba(233,75,120,0.08)] sm:h-10 sm:w-10 lg:h-11 lg:w-11">
+                <Image src={item.icon} alt="" width={22} height={22} className="h-4 w-4 sm:h-5 sm:w-5" />
               </div>
-              <p className="mt-2 text-[12px] font-medium text-[##737373]">{item.step}</p>
-              <h3 className="mt-1 text-[14px] font-semibold  text-[##262626]">{item.title}</h3>
-              <p className="mt-2 text-[13px] font-medium text-[#5a5a5a]">{item.text}</p>
+              <p className="mt-2 text-[11px] font-medium text-[#737373] sm:text-[12px]">{item.step}</p>
+              <h3 className="mt-1 text-[13px] font-semibold leading-5 text-[#262626] sm:text-[14px]">{item.title}</h3>
+              <p className="mt-1.5 text-[12px] font-medium leading-5 text-[#5a5a5a] sm:mt-2 sm:text-[13px]">{item.text}</p>
             </article>
           ))}
         </div>
