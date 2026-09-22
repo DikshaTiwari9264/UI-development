@@ -35,7 +35,7 @@ export function RequiredDocumentation() {
         <h2 className="text-[28px] font-semibold text-[#171717] sm:text-[34px]">
           Required Documentation
         </h2>
-        <p className="mt-2 text-[15px] font-medium text-[#262626]">
+        <p className="mt-2 text-[14px] min-w-[230px] font-medium text-[#262626]">
           The application relies on a 100% digital documentation stack. No physical paperwork or branch visits are required:
         </p>
 

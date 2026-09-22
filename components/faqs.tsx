@@ -35,11 +35,11 @@ export function Faqs() {
           Frequently Asked Questions (FAQs)
         </h2>
 
-        <div className="mt-8 space-y-3">
+        <div className="mt-6 space-y-1">
           {faqs.map((item, index) => {
             const open = openIndex === index;
             return (
-              <div key={item.question} className="overflow-hidden rounded-xl border border-[#eceff5] bg-white">
+              <div key={item.question} className="overflow-hidden rounded-xl border border-[#eceff5] text-[#262626] bg-white">
                 <button
                   type="button"
                   aria-expanded={open}
