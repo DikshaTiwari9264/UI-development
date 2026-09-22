@@ -119,7 +119,7 @@ export function Footer() {
             </a>
 
             <p className="mt-6 text-[14px] font-medium sm:mt-8 sm:text-[15px]">Download Our App</p>
-            <div className="mt-2 flex flex-col items-start gap-3 sm:mt-3 lg:flex-row lg:items-center">
+            <div className="mt-1 flex items-start gap-3 sm:mt-3 lg:flex-row lg:items-center mt-2">
               <a href="#">
                 <Image
                   src="/assets/Link - Download on the App Store.png"

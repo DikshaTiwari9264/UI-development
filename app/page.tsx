@@ -27,36 +27,36 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       <Header />
 
-      <section className="relative min-h-[640px] overflow-hidden lg:min-h-[720px]">
+      <section className="relative overflow-hidden lg:min-h-[720px]">
         <div
           className="absolute inset-0 bg-cover bg-[center_30%]"
           style={{
-            backgroundImage: "url('/assets/hero-banner.jpg')",
+            backgroundImage: "url('/assets/banner.png')",
           }}
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(12,10,9,0.72)_0%,rgba(12,10,9,0.38)_38%,rgba(12,10,9,0.18)_100%)]" />
 
-        <div className="relative mx-auto grid max-w-[1440px] items-center gap-10 px-5 py-12 lg:grid-cols-[1.15fr_0.85fr] lg:px-10 lg:py-16">
+        <div className="relative mx-auto grid max-w-[1440px] items-center gap-6 px-4 py-8 sm:gap-8 sm:px-6 sm:py-10 lg:min-h-[720px] lg:grid-cols-[1.15fr_0.85fr] lg:gap-10 lg:px-10 lg:py-16">
           <div className="max-w-[640px] text-white">
-            <p className="text-[14px] font-medium text-white/90">Vehicle Loan</p>
-            <h1 className="mt-5 max-w-[560px] text-[42px] font-extrabold leading-[1.05] tracking-[-0.045em] sm:text-[56px] lg:text-[64px]">
+            <p className="text-[12px] font-medium text-white/90 sm:text-[13px] lg:text-[14px]">Vehicle Loan</p>
+            <h1 className="mt-3 max-w-[560px] text-[28px] font-extrabold leading-[1.08] tracking-[-0.045em] sm:mt-4 sm:text-[40px] lg:mt-5 lg:text-[64px] lg:leading-[1.05]">
               Turn the key. We&apos;ll handle the loan.
             </h1>
-            <p className="mt-6 max-w-[520px] text-[16px] leading-7 text-white/85">
+            <p className="mt-3 max-w-[520px] text-[13px] leading-5 text-white/85 sm:mt-4 sm:text-[15px] sm:leading-6 lg:mt-6 lg:text-[16px] lg:leading-7">
               Whether it&apos;s a sleek two-wheeler or a powerful four-wheeler,
               Finnable deposits fast, hassle-free funds right into your bank
               account. Enjoy a 100% digital, zero-collateral application process
-              with absolute transparency. 
+              with absolute transparency.
             </p>
             <a
               href="#eligibility"
-              className="mt-8 inline-flex h-12 items-center rounded-xl bg-[#e94b78] px-7 text-[15px] font-semibold text-white shadow-[0_10px_24px_rgba(233,75,120,0.35)] transition hover:bg-[#d63e6c]"
+              className="mt-5 inline-flex items-center rounded-sm bg-[#CD2E54] px-5 py-2.5 text-[13px] font-semibold text-white shadow-[0_10px_24px_rgba(233,75,120,0.35)] transition hover:bg-[#d63e6c] sm:mt-6 sm:px-6 sm:py-3 sm:text-[14px] lg:mt-8 lg:px-8 lg:text-[15px]"
             >
               Check Loan Offer
             </a>
           </div>
 
-          <div className="mx-auto w-full max-w-[420px] lg:ml-auto">
+          <div className="mx-auto w-full min-w-0 max-w-[420px] lg:ml-auto">
             <LoanCalculator />
           </div>
         </div>
