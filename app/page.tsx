@@ -8,6 +8,7 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { KeyBenefits } from "@/components/key-benefits";
 import { LoanCalculator } from "@/components/loan-calculator";
+import { Overview } from "@/components/overview";
 import { PricingStructure } from "@/components/pricing-structure";
 import { RequiredDocumentation } from "@/components/required-documentation";
 
@@ -83,6 +84,7 @@ export default function Home() {
         </div>
       </section>
 
+      <Overview />
       <KeyBenefits />
       <EligibilityCriteria />
       <RequiredDocumentation />
