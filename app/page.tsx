@@ -66,11 +66,11 @@ export default function Home() {
         <FeatureRow />
       </div>
 
-      <section className="border-t border-[#f0f0f0] bg-white">
-        <div className="mx-auto flex max-w-[1240px] items-center justify-between gap-3 px-5 py-4 lg:px-10">
-          <nav className="thin-scroll flex min-w-0 flex-1 items-center gap-6 overflow-x-auto text-[14.5px] text-[#4a4a4a]">
+      <section className="overflow-x-hidden border-t border-[#f0f0f0] bg-white">
+        <div className="mx-auto flex max-w-[1240px] flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-5 sm:py-4 lg:px-10">
+          <nav className="flex min-w-0 flex-1 flex-wrap items-center gap-x-3 gap-y-2 text-[13px] text-[#4a4a4a] sm:gap-x-4 sm:text-[14px] lg:flex-nowrap lg:gap-6 lg:text-[14.5px]">
             {pageLinks.map((item) => (
-              <a key={item.href} href={item.href} className="whitespace-nowrap hover:text-[#1a1a1a]">
+              <a key={item.href} href={item.href} className="hover:text-[#1a1a1a]">
                 {item.label}
               </a>
             ))}
